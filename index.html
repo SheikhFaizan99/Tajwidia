@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tajweedia - Premium 3D Online Quran Academy | Learn Tajweed & Hifz</title>
-    <meta name="description" content="Immerse yourself in beautiful Quran recitation with our 3D learning platform. Learn Tajweed online with certified teachers in an engaging virtual environment.">
+    <title>Tajweedia - Premium Online Quran Academy | Learn Tajweed & Hifz</title>
+    <meta name="description" content="Beautiful Quran recitation starts here. Learn Tajweed online with certified teachers. Engaging classes for kids and adults in Quran memorization (Hifz), recitation and Arabic.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Amiri:wght@400;700&family=El+Messiri:wght@500;600;700&display=swap" rel="stylesheet">
@@ -42,12 +42,6 @@
             font-weight: 600;
         }
         
-        /* 3D Perspective Container */
-        .perspective-container {
-            perspective: 1000px;
-            transform-style: preserve-3d;
-        }
-        
         /* Header Styles */
         header {
             background: linear-gradient(135deg, rgba(26, 95, 26, 0.95) 0%, rgba(42, 139, 42, 0.95) 100%), 
@@ -59,7 +53,6 @@
             padding: 6rem 1rem 10rem;
             clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
             position: relative;
-            transform: translateZ(0);
         }
         
         .header-content {
@@ -67,7 +60,6 @@
             margin: 0 auto;
             position: relative;
             z-index: 5;
-            transform: translateZ(30px);
         }
         
         .logo {
@@ -75,7 +67,6 @@
             align-items: center;
             justify-content: center;
             margin-bottom: 3rem;
-            transform: translateZ(50px);
         }
         
         .logo-icon {
@@ -113,7 +104,6 @@
             font-weight: 700;
             line-height: 1.2;
             text-shadow: var(--text-shadow);
-            transform: translateZ(40px);
         }
         
         .subheader {
@@ -121,7 +111,6 @@
             margin-bottom: 3rem;
             opacity: 0.95;
             text-shadow: var(--text-shadow);
-            transform: translateZ(30px);
         }
         
         .btn {
@@ -137,19 +126,18 @@
             transition: var(--transition);
             box-shadow: 0 10px 25px rgba(212, 175, 55, 0.4);
             font-size: 1.1rem;
-            transform: translateZ(50px);
             position: relative;
             overflow: hidden;
         }
         
         .btn:hover {
             background: var(--gold-light);
-            transform: translateY(-5px) translateZ(50px);
+            transform: translateY(-5px);
             box-shadow: 0 15px 35px rgba(212, 175, 55, 0.5);
         }
         
         .btn:active {
-            transform: translateY(0) translateZ(50px);
+            transform: translateY(0);
         }
         
         .btn:before {
@@ -250,7 +238,6 @@
             text-align: center;
             margin-bottom: 5rem;
             position: relative;
-            transform: translateZ(20px);
         }
         
         .section-title h2 {
@@ -300,7 +287,6 @@
         
         .about-text {
             flex: 1;
-            transform: translateZ(20px);
         }
         
         .about-text h3 {
@@ -371,13 +357,11 @@
             overflow: hidden;
             box-shadow: var(--shadow);
             position: relative;
-            transform-style: preserve-3d;
-            transform: perspective(1000px) rotateY(-5deg);
             transition: var(--transition);
         }
         
         .about-image:hover {
-            transform: perspective(1000px) rotateY(0deg);
+            transform: scale(1.02);
         }
         
         .about-image img {
@@ -435,7 +419,6 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 3rem;
-            transform: translateZ(30px);
         }
         
         .course-card {
@@ -445,12 +428,11 @@
             box-shadow: var(--shadow);
             transition: var(--transition);
             color: var(--dark);
-            transform-style: preserve-3d;
             position: relative;
         }
         
         .course-card:hover {
-            transform: translateY(-15px) rotateX(5deg);
+            transform: translateY(-15px);
             box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
         }
         
@@ -598,7 +580,6 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 3rem;
-            transform: translateZ(20px);
         }
         
         .testimonial-card {
@@ -608,11 +589,10 @@
             box-shadow: var(--shadow);
             position: relative;
             transition: var(--transition);
-            transform-style: preserve-3d;
         }
         
         .testimonial-card:hover {
-            transform: translateY(-10px) rotateY(5deg);
+            transform: translateY(-10px);
         }
         
         .testimonial-card:before {
@@ -679,95 +659,6 @@
             opacity: 0.8;
         }
         
-        /* 3D Feature Section */
-        .feature-3d {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            color: var(--white);
-            padding: 8rem 0;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .feature-3d-content {
-            display: flex;
-            align-items: center;
-            gap: 5rem;
-            position: relative;
-            z-index: 2;
-        }
-        
-        .feature-3d-text {
-            flex: 1;
-            transform: translateZ(30px);
-        }
-        
-        .feature-3d-text h2 {
-            font-size: 2.8rem;
-            margin-bottom: 2rem;
-            font-family: 'El Messiri', sans-serif;
-        }
-        
-        .feature-3d-text p {
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
-            line-height: 1.8;
-            max-width: 600px;
-        }
-        
-        .feature-3d-list {
-            margin-top: 3rem;
-        }
-        
-        .feature-3d-list li {
-            position: relative;
-            padding-left: 3rem;
-            margin-bottom: 1.5rem;
-            font-size: 1.1rem;
-            list-style: none;
-        }
-        
-        .feature-3d-list li:before {
-            content: '\f00c';
-            font-family: 'Font Awesome 6 Free';
-            font-weight: 900;
-            position: absolute;
-            left: 0;
-            top: 0;
-            color: var(--gold);
-            font-size: 1.5rem;
-        }
-        
-        .feature-3d-image {
-            flex: 1;
-            position: relative;
-            transform-style: preserve-3d;
-            perspective: 1000px;
-        }
-        
-        .feature-3d-image img {
-            width: 100%;
-            border-radius: 20px;
-            box-shadow: var(--shadow);
-            transform: rotateY(-15deg) rotateX(5deg);
-            transition: var(--transition);
-        }
-        
-        .feature-3d-image:hover img {
-            transform: rotateY(-5deg) rotateX(0deg);
-        }
-        
-        .feature-3d-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0.05;
-            z-index: 1;
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="%23d4af37"><path d="M50 0 L100 50 L50 100 L0 50 Z"/></svg>');
-            background-size: 100px;
-        }
-        
         /* CTA Section */
         .cta {
             background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
@@ -832,6 +723,95 @@
         .btn-outline:hover {
             background: var(--white);
             color: var(--primary);
+        }
+        
+        /* WhatsApp Button */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            z-index: 100;
+            transition: var(--transition);
+        }
+        
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+            background: #128C7E;
+        }
+        
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-content {
+            background: white;
+            padding: 3rem;
+            border-radius: 15px;
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            position: relative;
+            animation: modalFadeIn 0.3s ease-out;
+        }
+        
+        @keyframes modalFadeIn {
+            from { opacity: 0; transform: translateY(-50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--dark);
+        }
+        
+        .modal h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+        
+        .modal p {
+            margin-bottom: 2rem;
+        }
+        
+        .modal-btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        
+        .modal-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
         }
         
         /* Footer */
@@ -982,16 +962,6 @@
         }
         
         /* Responsive Styles */
-        @media (max-width: 1200px) {
-            .feature-3d-content {
-                flex-direction: column;
-            }
-            
-            .feature-3d-image {
-                margin-top: 4rem;
-            }
-        }
-        
         @media (max-width: 992px) {
             .about-content {
                 flex-direction: column;
@@ -1112,12 +1082,37 @@
                 justify-content: center;
                 text-align: center;
             }
+            
+            .whatsapp-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+                bottom: 20px;
+                right: 20px;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/923459413007" class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Modal Structure -->
+    <div class="modal" id="trialModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3>Start Your Free Trial</h3>
+            <p>Ready to begin your Quran journey with Tajweedia? Contact us on WhatsApp to schedule your free trial class.</p>
+            <a href="https://wa.me/923459413007" class="modal-btn" target="_blank">
+                <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+            </a>
+        </div>
+    </div>
+
     <!-- Header Section -->
-    <header class="perspective-container">
+    <header>
         <div class="floating-mosque mosque-1">
             <i class="fas fa-mosque"></i>
         </div>
@@ -1145,8 +1140,8 @@
             </div>
             <h1 class="arabic">تعلم تجويد القرآن الكريم</h1>
             <h1>Master Quran Recitation with Perfect Tajweed</h1>
-            <p class="subheader">Immerse yourself in beautiful Quranic recitation with our interactive 3D learning platform</p>
-            <a href="#signup" class="btn">Start Free Trial <i class="fas fa-arrow-right"></i></a>
+            <p class="subheader">Immerse yourself in beautiful Quranic recitation with our interactive learning platform</p>
+            <button class="btn" id="startTrialBtn">Start Free Trial <i class="fas fa-arrow-right"></i></button>
         </div>
     </header>
     
@@ -1159,7 +1154,7 @@
             </div>
             <div class="about-content">
                 <div class="about-text">
-                    <p>At Tajweedia, we're revolutionizing Quran education by combining centuries-old Tajweed traditions with cutting-edge 3D learning technology. Our mission is to make authentic Quranic recitation accessible to Muslims worldwide through an immersive online experience.</p>
+                    <p>At Tajweedia, we're passionate about making authentic Quranic recitation accessible to Muslims worldwide. Our mission is to teach Tajweed with excellence while making the learning process engaging and effective.</p>
                     <h3>Why Choose Tajweedia?</h3>
                     <div class="features">
                         <div class="feature-item">
@@ -1173,20 +1168,20 @@
                         </div>
                         <div class="feature-item">
                             <div class="feature-icon">
-                                <i class="fas fa-vr-cardboard"></i>
+                                <i class="fas fa-user-graduate"></i>
                             </div>
                             <div class="feature-text">
-                                <h4>3D Learning</h4>
-                                <p>Interactive visualizations of Makharij and Tajweed rules</p>
+                                <h4>Personalized Learning</h4>
+                                <p>Custom learning plans for each student's level and goals</p>
                             </div>
                         </div>
                         <div class="feature-item">
                             <div class="feature-icon">
-                                <i class="fas fa-user-graduate"></i>
+                                <i class="fas fa-chart-line"></i>
                             </div>
                             <div class="feature-text">
-                                <h4>Personalized Path</h4>
-                                <p>Custom learning plans for each student's level and goals</p>
+                                <h4>Progress Tracking</h4>
+                                <p>Interactive dashboard to monitor your improvement</p>
                             </div>
                         </div>
                         <div class="feature-item">
@@ -1199,7 +1194,7 @@
                             </div>
                         </div>
                     </div>
-                    <p>Our innovative teaching methodology combines traditional Tajweed rules with modern educational techniques, ensuring students of all ages can recite the Quran as it was revealed to Prophet Muhammad (PBUH).</p>
+                    <p>Our teaching methodology combines traditional Tajweed rules with modern educational techniques, ensuring students of all ages can recite the Quran as it was revealed to Prophet Muhammad (PBUH).</p>
                 </div>
                 <div class="about-image">
                     <img src="https://images.unsplash.com/photo-1564420228450-d4f2c5e0f7b9?ixlib=rb-1.2.1&auto=format&fit=croll&w=1350&q=80" alt="Quran teacher with student">
@@ -1229,9 +1224,9 @@
                     </div>
                     <div class="course-content">
                         <ul>
-                            <li>Learn basic rules of pronunciation (Makharij) with 3D visual aids</li>
-                            <li>Correct common recitation mistakes through interactive exercises</li>
-                            <li>Build confidence in reading Quran fluently with daily practice</li>
+                            <li>Learn basic rules of pronunciation (Makharij)</li>
+                            <li>Correct common recitation mistakes</li>
+                            <li>Build confidence in reading Quran fluently</li>
                             <li>Personalized feedback from certified instructors</li>
                         </ul>
                         <div class="course-meta">
@@ -1239,7 +1234,9 @@
                                 $50
                                 <span>per month</span>
                             </div>
-                            <a href="#" class="enroll-btn">Enroll Now <i class="fas fa-arrow-right"></i></a>
+                            <button class="enroll-btn enroll-now-btn">
+                                Enroll Now <i class="fas fa-arrow-right"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -1258,7 +1255,7 @@
                     <div class="course-content">
                         <ul>
                             <li>Personalized memorization plan tailored to your pace</li>
-                            <li>Proven techniques for long-term retention with 3D visualization</li>
+                            <li>Proven techniques for long-term retention</li>
                             <li>Regular revision sessions with progress tracking</li>
                             <li>Monthly evaluation by senior Huffaz</li>
                         </ul>
@@ -1267,7 +1264,9 @@
                                 $100
                                 <span>per month</span>
                             </div>
-                            <a href="#" class="enroll-btn">Enroll Now <i class="fas fa-arrow-right"></i></a>
+                            <button class="enroll-btn enroll-now-btn">
+                                Enroll Now <i class="fas fa-arrow-right"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -1285,7 +1284,7 @@
                     </div>
                     <div class="course-content">
                         <ul>
-                            <li>Master complex Tajweed rules with interactive 3D models</li>
+                            <li>Master complex Tajweed rules</li>
                             <li>Learn multiple Qira'at styles from certified Qaris</li>
                             <li>Prepare for Ijazah certification with mock tests</li>
                             <li>Advanced audio analysis of your recitation</li>
@@ -1295,34 +1294,13 @@
                                 $90
                                 <span>per month</span>
                             </div>
-                            <a href="#" class="enroll-btn">Enroll Now <i class="fas fa-arrow-right"></i></a>
+                            <button class="enroll-btn enroll-now-btn">
+                                Enroll Now <i class="fas fa-arrow-right"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    
-    <!-- 3D Feature Section -->
-    <section class="feature-3d">
-        <div class="container">
-            <div class="feature-3d-content">
-                <div class="feature-3d-text">
-                    <h2>Immersive 3D Learning Experience</h2>
-                    <p>Our revolutionary 3D visualization technology helps you understand Tajweed rules like never before. See the exact articulation points (Makharij) of each letter and perfect your pronunciation with interactive feedback.</p>
-                    <div class="feature-3d-list">
-                        <li>3D models of mouth and throat for precise articulation</li>
-                        <li>Interactive Tajweed rule visualizations</li>
-                        <li>Real-time recitation analysis</li>
-                        <li>Virtual classroom with spatial audio</li>
-                    </div>
-                    <a href="#" class="btn" style="margin-top: 2rem;">Experience 3D Demo <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="feature-3d-image">
-                    <img src="https://images.unsplash.com/photo-1589254065878-42c9da997008?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="3D Tajweed Visualization">
-                </div>
-            </div>
-            <div class="feature-3d-bg"></div>
         </div>
     </section>
     
@@ -1344,7 +1322,7 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                         </div>
-                        <p class="testimonial-text">"The 3D visualization helped me understand Makharij in ways I never could before. My Tajweed improved dramatically within weeks. The teachers are incredibly patient and make learning enjoyable."</p>
+                        <p class="testimonial-text">"My Tajweed improved dramatically within weeks. The teachers are incredibly patient and make learning enjoyable for all ages."</p>
                         <div class="testimonial-author">
                             <div class="author-img">
                                 <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Aisha M.">
@@ -1367,7 +1345,7 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                         </div>
-                        <p class="testimonial-text">"As a revert, I was nervous about learning Tajweed, but the 3D models made it so intuitive. My teacher was exceptionally supportive. I've now memorized 5 juz with Tajweedia's Hifz program!"</p>
+                        <p class="testimonial-text">"As a revert, I was nervous about learning Tajweed, but my teacher made it so easy to understand. I've now memorized 5 juz with Tajweedia!"</p>
                         <div class="testimonial-author">
                             <div class="author-img">
                                 <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Michael T.">
@@ -1390,13 +1368,13 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                         </div>
-                        <p class="testimonial-text">"The flexibility of scheduling classes around my medical residency has been life-changing. The 3D recitation analysis helped me correct mistakes I didn't know I was making. Highly recommend!"</p>
+                        <p class="testimonial-text">"The flexibility of scheduling classes around my work hours has been life-changing. The teachers are exceptional and truly care about students."</p>
                         <div class="testimonial-author">
                             <div class="author-img">
                                 <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Omar K.">
                             </div>
                             <div class="author-info">
-                                <h4>Dr. Omar K.</h4>
+                                <h4>Omar K.</h4>
                                 <p>Dubai, UAE | Advanced Course</p>
                             </div>
                         </div>
@@ -1410,10 +1388,12 @@
     <section class="cta" id="signup">
         <div class="cta-content">
             <h2>Ready to Transform Your Quran Recitation?</h2>
-            <p>Join thousands of students worldwide experiencing Tajweed through our immersive 3D platform</p>
+            <p>Join thousands of students worldwide who have perfected their Tajweed with our expert teachers</p>
             <div class="cta-btns">
-                <a href="#" class="btn">Start Free Trial <i class="fas fa-arrow-right"></i></a>
-                <a href="#" class="btn btn-outline">Speak to Advisor</a>
+                <button class="btn" id="ctaTrialBtn">Start Free Trial <i class="fas fa-arrow-right"></i></button>
+                <a href="tel:03459413007" class="btn btn-outline">
+                    <i class="fas fa-phone"></i> Call Now
+                </a>
             </div>
         </div>
     </section>
@@ -1428,12 +1408,12 @@
                         <div class="arabic">تجويدية</div>
                         <div class="english">Tajweedia</div>
                     </div>
-                    <p>Revolutionizing Quran education through innovative 3D technology while preserving authentic Tajweed traditions.</p>
+                    <p>Making Quran education accessible to Muslims worldwide through innovative online learning.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
                         <a href="#"><i class="fab fa-youtube"></i></a>
-                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://wa.me/923459413007" target="_blank"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
                 
@@ -1441,10 +1421,10 @@
                     <h3>Quick Links</h3>
                     <ul>
                         <li><a href="#"><i class="fas fa-chevron-right"></i> Home</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="#about"><i class="fas fa-chevron-right"></i> About Us</a></li>
                         <li><a href="#"><i class="fas fa-chevron-right"></i> Courses</a></li>
                         <li><a href="#"><i class="fas fa-chevron-right"></i> Teachers</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> 3D Learning</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Pricing</a></li>
                     </ul>
                 </div>
                 
@@ -1461,8 +1441,8 @@
                 
                 <div class="footer-contact">
                     <h3>Contact Us</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> 123 Quranic Avenue, Islamic City</p>
-                    <p><i class="fas fa-phone-alt"></i> +1 (234) 567-8900</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Islamic Education Center, Pakistan</p>
+                    <p><i class="fas fa-phone-alt"></i> <a href="tel:03459413007" style="color: white;">0345 9413007</a></p>
                     <p><i class="fas fa-envelope"></i> info@tajweedia.com</p>
                     <p><i class="fas fa-globe"></i> www.tajweedia.com</p>
                 </div>
@@ -1473,5 +1453,43 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // Modal functionality
+        const modal = document.getElementById("trialModal");
+        const startTrialBtn = document.getElementById("startTrialBtn");
+        const ctaTrialBtn = document.getElementById("ctaTrialBtn");
+        const enrollBtns = document.querySelectorAll(".enroll-now-btn");
+        const closeModal = document.querySelector(".close-modal");
+        
+        // Open modal when any trial button is clicked
+        function openModal() {
+            modal.style.display = "flex";
+            document.body.style.overflow = "hidden";
+        }
+        
+        // Close modal when X is clicked
+        function closeModalFunc() {
+            modal.style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+        
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                closeModalFunc();
+            }
+        }
+        
+        // Event listeners
+        startTrialBtn.addEventListener("click", openModal);
+        ctaTrialBtn.addEventListener("click", openModal);
+        enrollBtns.forEach(btn => {
+            btn.addEventListener("click", openModal);
+        });
+        closeModal.addEventListener("click", closeModalFunc);
+        
+        // WhatsApp button functionality is handled via direct link in the HTML
+    </script>
 </body>
 </html>
