@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tajweedia - Premium Online Quran Academy | Learn Tajweed & Hifz</title>
+    <meta name="description" content="Beautiful Quran recitation starts here. Learn Tajweed online with certified teachers. Engaging classes for kids and adults in Quran memorization (Hifz), recitation and Arabic.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2a8b2a;
+            --primary-dark: #1e6e1e;
+            --gold: #d4af37;
+            --gold-light: #f1e5ac;
+            --light: #f8f5ee;
+            --dark: #2c2926;
+            --white: #ffffff;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.7;
+            color: var(--dark);
+            background-color: var(--light);
+            overflow-x: hidden;
+        }
+        
+        .arabic {
+            font-family: 'Amiri', serif;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, rgba(42, 139, 42, 0.9) 0%, rgba(30, 110, 30, 0.9) 100%), 
+                        url('https://images.unsplash.com/photo-1563465812-70f7c42c3663?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            text-align: center;
+            padding: 5rem 1rem 8rem;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+            position: relative;
+        }
+        
+        .header-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+        
+        .logo-icon {
+            font-size: 2.5rem;
+            color: var(--gold);
+            margin-right: 1rem;
+        }
+        
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        
+        .logo-text .arabic {
+            font-size: 2.8rem;
+            line-height: 1;
+            color: var(--gold-light);
+        }
+        
+        .logo-text .english {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--white);
+            margin-top: -0.5rem;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        .subheader {
+            font-size: 1.4rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            background: var(--gold);
+            color: var(--dark);
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+        }
+        
+        .btn:hover {
+            background: var(--gold-light);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+        }
+        
+        .btn i {
+            margin-left: 0.5rem;
+        }
+        
+        .floating-mosque {
+            position: absolute;
+            opacity: 0.1;
+            z-index: 1;
+        }
+        
+        .mosque-1 {
+            top: 20%;
+            left: 5%;
+            font-size: 8rem;
+        }
+        
+        .mosque-2 {
+            bottom: 10%;
+            right: 10%;
+            font-size: 6rem;
+        }
+        
+        /* Container Styles */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        /* Section Styles */
+        section {
+            padding: 6rem 0;
+            position: relative;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            display: inline-block;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+        
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--gold);
+            border-radius: 2px;
+        }
+        
+        .section-title .subtitle {
+            font-size: 1.2rem;
+            color: var(--primary-dark);
+            margin-top: 1rem;
+        }
+        
+        /* About Section */
+        #about {
+            background: var(--white);
+            clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+            margin-top: -5rem;
+            padding: 8rem 0;
+        }
+        
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-text h3 {
+            font-size: 1.8rem;
+            color: var(--primary-dark);
+            margin-bottom: 1.5rem;
+        }
+        
+        .about-text p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin: 2.5rem 0;
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .feature-icon {
+            font-size: 1.5rem;
+            color: var(--gold);
+            margin-right: 1rem;
+            margin-top: 0.3rem;
+        }
+        
+        .feature-text h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .feature-text p {
+            font-size: 0.95rem;
+            opacity: 0.8;
+            margin: 0;
+        }
+        
+        .about-image {
+            flex: 1;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: var(--transition);
+        }
+        
+        .about-image:hover img {
+            transform: scale(1.03);
+        }
+        
+        .about-image:before {
+            content: '';
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            width: 100%;
+            height: 100%;
+            border: 3px solid var(--gold);
+            border-radius: 15px;
+            z-index: -1;
+            transition: var(--transition);
+        }
+        
+        .about-image:hover:before {
+            top: -10px;
+            right: -10px;
+        }
+        
+        /* Courses Section */
+        .courses {
+            background: url('https://images.unsplash.com/photo-1542816417-0983675ab2dd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover fixed;
+            position: relative;
+            z-index: 1;
+            color: var(--white);
+        }
+        
+        .courses:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(42, 139, 42, 0.9);
+            z-index: -1;
+        }
+        
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+        
+        .course-card {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            color: var(--dark);
+        }
+        
+        .course-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .course-img {
+            height: 200px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .course-img:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.7));
+            z-index: 1;
+        }
+        
+        .course-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .course-card:hover .course-img img {
+            transform: scale(1.1);
+        }
+        
+        .course-title {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 1.5rem;
+            z-index: 2;
+            color: var(--white);
+        }
+        
+        .course-title h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .course-title .duration {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            display: flex;
+            align-items: center;
+        }
+        
+        .course-title .duration i {
+            margin-right: 0.5rem;
+        }
+        
+        .course-content {
+            padding: 1.8rem;
+        }
+        
+        .course-content ul {
+            list-style: none;
+        }
+        
+        .course-content ul li {
+            position: relative;
+            padding-left: 1.8rem;
+            margin-bottom: 0.8rem;
+        }
+        
+        .course-content ul li:before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+        }
+        
+        .course-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(0,0,0,0.1);
+        }
+        
+        .price {
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+        
+        .enroll-btn {
+            background: var(--primary);
+            color: var(--white);
+            padding: 0.6rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .enroll-btn:hover {
+            background: var(--primary-dark);
+        }
+        
+        /* Testimonials Section */
+        .testimonials {
+            background: var(--light);
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+        
+        .testimonial-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            position: relative;
+            transition: var(--transition);
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .testimonial-card:before {
+            content: '\f10d';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 3rem;
+            color: rgba(42, 139, 42, 0.1);
+            z-index: 0;
+        }
+        
+        .testimonial-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .rating {
+            color: var(--gold);
+            margin-bottom: 1rem;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 1rem;
+        }
+        
+        .author-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .author-info h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.2rem;
+        }
+        
+        .author-info p {
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+        
+        /* CTA Section */
+        .cta {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: var(--white);
+            text-align: center;
+            padding: 6rem 2rem;
+            position: relative;
+            clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+            margin-bottom: -1px;
+        }
+        
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .cta p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2.5rem;
+            opacity: 0.9;
+        }
+        
+        .cta-btns {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .btn-outline {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+            padding: 1rem 2.5rem;
+        }
+        
+        .btn-outline:hover {
+            background: var(--white);
+            color: var(--primary);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: var(--white);
+            padding: 5rem 0 2rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-logo .arabic {
+            font-size: 2rem;
+            color: var(--gold);
+            margin-right: 1rem;
+        }
+        
+        .footer-logo .english {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        
+        .footer-about p {
+            opacity: 0.8;
+            margin-bottom: 1.5rem;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            color: var(--white);
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            background: var(--gold);
+            color: var(--dark);
+            transform: translateY(-3px);
+        }
+        
+        .footer-links h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.8rem;
+        }
+        
+        .footer-links h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--gold);
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links ul li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-links ul li a {
+            color: var(--white);
+            opacity: 0.8;
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+        }
+        
+        .footer-links ul li a:hover {
+            opacity: 1;
+            color: var(--gold);
+            padding-left: 5px;
+        }
+        
+        .footer-links ul li a i {
+            margin-right: 0.5rem;
+            font-size: 0.8rem;
+        }
+        
+        .footer-contact p {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            opacity: 0.8;
+        }
+        
+        .footer-contact p i {
+            margin-right: 1rem;
+            color: var(--gold);
+            width: 20px;
+            text-align: center;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .about-image {
+                margin-top: 3rem;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                padding: 4rem 1rem 6rem;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .subheader {
+                font-size: 1.2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            section {
+                padding: 4rem 0;
+            }
+            
+            #about {
+                padding: 6rem 0;
+            }
+            
+            .cta h2 {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .logo {
+                flex-direction: column;
+            }
+            
+            .logo-icon {
+                margin-right: 0;
+                margin-bottom: 1rem;
+            }
+            
+            .logo-text {
+                align-items: center;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-btns {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: center;
+            }
+            
+            .btn, .btn-outline {
+                width: 100%;
+                max-width: 300px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="floating-mosque mosque-1">
+            <i class="fas fa-mosque"></i>
+        </div>
+        <div class="floating-mosque mosque-2">
+            <i class="fas fa-mosque"></i>
+        </div>
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-book-quran"></i>
+                </div>
+                <div class="logo-text">
+                    <div class="arabic">تجويدية</div>
+                    <div class="english">Tajweedia</div>
+                </div>
+            </div>
+            <h1>Master Quran Recitation with Perfect Tajweed</h1>
+            <p class="subheader">Beautiful Quranic recitation starts here. Learn from certified teachers with flexible schedules.</p>
+            <a href="#signup" class="btn">Start Free Trial <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </header>
+    
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Our Academy</h2>
+                <p class="subtitle">Preserving the divine art of Quranic recitation</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>At Tajweedia, we're passionate about preserving the divine art of Quranic recitation. Our mission is to make authentic Tajweed education accessible to Muslims worldwide through structured online learning.</p>
+                    <h3>Why Choose Tajweedia?</h3>
+                    <div class="features">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Certified Teachers</h4>
+                                <p>Al-Azhar qualified instructors with Ijazah</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-user-graduate"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Personalized Learning</h4>
+                                <p>1-on-1 or small group classes tailored to your level</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Progress Tracking</h4>
+                                <p>Interactive dashboard to monitor your improvement</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Flexible Scheduling</h4>
+                                <p>24/7 availability to fit your busy life</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Our teaching methodology combines traditional Tajweed rules with modern educational techniques, ensuring students of all levels can recite the Quran as revealed to Prophet Muhammad (PBUH).</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1564420228450-d4f2c5e0f7b9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Quran teacher with student">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Courses Section -->
+    <section class="courses">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Courses</h2>
+                <p class="subtitle">Comprehensive programs for all levels</p>
+            </div>
+            <div class="course-grid">
+                <!-- Course 1 -->
+                <div class="course-card">
+                    <div class="course-img">
+                        <img src="https://images.unsplash.com/photo-1549060279-7e168fcee0c2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Tajweed Course">
+                        <div class="course-title">
+                            <h3>Tajweed for Beginners</h3>
+                            <div class="duration">
+                                <i class="far fa-clock"></i> 12 Weeks
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-content">
+                        <ul>
+                            <li>Learn basic rules of pronunciation (Makharij)</li>
+                            <li>Correct common recitation mistakes</li>
+                            <li>Build confidence in reading Quran fluently</li>
+                        </ul>
+                        <div class="course-meta">
+                            <div class="price">$99</div>
+                            <a href="#" class="enroll-btn">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course 2 -->
+                <div class="course-card">
+                    <div class="course-img">
+                        <img src="https://images.unsplash.com/photo-1571805618149-3a772570eb4d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Hifz Program">
+                        <div class="course-title">
+                            <h3>Hifz Program</h3>
+                            <div class="duration">
+                                <i class="far fa-clock"></i> Custom Schedule
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-content">
+                        <ul>
+                            <li>Personalized memorization plan</li>
+                            <li>Proven techniques for long-term retention</li>
+                            <li>Regular revision sessions</li>
+                        </ul>
+                        <div class="course-meta">
+                            <div class="price">$199/mo</div>
+                            <a href="#" class="enroll-btn">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course 3 -->
+                <div class="course-card">
+                    <div class="course-img">
+                        <img src="https://images.unsplash.com/photo-1603210118786-6a6989f3376d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Advanced Recitation">
+                        <div class="course-title">
+                            <h3>Advanced Recitation</h3>
+                            <div class="duration">
+                                <i class="far fa-clock"></i> 16 Weeks
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-content">
+                        <ul>
+                            <li>Master complex Tajweed rules</li>
+                            <li>Learn multiple Qira'at styles</li>
+                            <li>Prepare for Ijazah certification</li>
+                        </ul>
+                        <div class="course-meta">
+                            <div class="price">$149</div>
+                            <a href="#" class="enroll-btn">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Our Students Say</h2>
+                <p class="subtitle">Success stories from our global community</p>
+            </div>
+            <div class="testimonial-grid">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"My daughter's recitation improved dramatically after just one month with Tajweedia. The teachers are so patient and knowledgeable, making learning enjoyable for kids."</p>
+                        <div class="testimonial-author">
+                            <div class="author-img">
+                                <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Aisha M.">
+                            </div>
+                            <div class="author-info">
+                                <h4>Aisha M.</h4>
+                                <p>London, UK</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"As a revert, I was nervous about learning Tajweed, but my teacher made it so easy to understand. Alhamdulillah for Tajweedia's supportive environment!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-img">
+                                <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Michael T.">
+                            </div>
+                            <div class="author-info">
+                                <h4>Michael T.</h4>
+                                <p>Toronto, Canada</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"The flexibility of scheduling classes around my work hours has been a game-changer. I'm finally memorizing Quran consistently after years of failed attempts."</p>
+                        <div class="testimonial-author">
+                            <div class="author-img">
+                                <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Omar K.">
+                            </div>
+                            <div class="author-info">
+                                <h4>Omar K.</h4>
+                                <p>Dubai, UAE</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="cta" id="signup">
+        <div class="container">
+            <h2>Ready to Begin Your Quran Journey?</h2>
+            <p>Join thousands of students worldwide who have transformed their Quran recitation with our expert teachers.</p>
+            <div class="cta-btns">
+                <a href="#" class="btn">Start Free Trial <i class="fas fa-arrow-right"></i></a>
+                <a href="#" class="btn btn-outline">Speak to Advisor</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <div class="arabic">تجويدية</div>
+                        <div class="english">Tajweedia</div>
+                    </div>
+                    <p>Making Quran education accessible to Muslims worldwide through innovative online learning.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Courses</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Teachers</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Pricing</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Courses</h3>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Tajweed for Beginners</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Hifz Program</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Advanced Recitation</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Quranic Arabic</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Kids Program</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Quranic Avenue, Islamic City</p>
+                    <p><i class="fas fa-phone-alt"></i> +1 (234) 567-8900</p>
+                    <p><i class="fas fa-envelope"></i> info@tajweedia.com</p>
+                    <p><i class="fas fa-globe"></i> www.tajweedia.com</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Tajweedia - Online Quran Academy. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
